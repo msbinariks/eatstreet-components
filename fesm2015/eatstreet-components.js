@@ -1,5 +1,5 @@
 import * as i0 from '@angular/core';
-import { Injectable, Component, NgModule } from '@angular/core';
+import { Injectable, Component, NgModule, Optional, SkipSelf } from '@angular/core';
 
 class EatstreetComponentsService {
     constructor() { }
@@ -38,18 +38,38 @@ EatstreetComponentsComponent.ɵcmp = i0.ɵɵdefineComponent({ type: EatstreetCom
     }], function () { return []; }, null); })();
 
 class EatstreetComponentsModule {
+    constructor(parentModule) {
+        if (parentModule) {
+            throw new Error('EatstreetComponentsModule is already loaded. Import it in the AppModule only');
+        }
+    }
+    static forRoot($injector) {
+        return {
+            ngModule: EatstreetComponentsModule,
+            providers: [
+                {
+                    provide: '$injector', useValue: $injector
+                }
+            ]
+        };
+    }
 }
 EatstreetComponentsModule.ɵmod = i0.ɵɵdefineNgModule({ type: EatstreetComponentsModule });
-EatstreetComponentsModule.ɵinj = i0.ɵɵdefineInjector({ factory: function EatstreetComponentsModule_Factory(t) { return new (t || EatstreetComponentsModule)(); }, imports: [[]] });
+EatstreetComponentsModule.ɵinj = i0.ɵɵdefineInjector({ factory: function EatstreetComponentsModule_Factory(t) { return new (t || EatstreetComponentsModule)(i0.ɵɵinject(EatstreetComponentsModule, 12)); }, imports: [[]] });
 (function () { (typeof ngJitMode === "undefined" || ngJitMode) && i0.ɵɵsetNgModuleScope(EatstreetComponentsModule, { declarations: [EatstreetComponentsComponent], exports: [EatstreetComponentsComponent] }); })();
 (function () { (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(EatstreetComponentsModule, [{
         type: NgModule,
         args: [{
                 declarations: [EatstreetComponentsComponent],
                 imports: [],
-                exports: [EatstreetComponentsComponent]
+                exports: [EatstreetComponentsComponent],
+                entryComponents: [EatstreetComponentsComponent]
             }]
-    }], null, null); })();
+    }], function () { return [{ type: EatstreetComponentsModule, decorators: [{
+                type: Optional
+            }, {
+                type: SkipSelf
+            }] }]; }, null); })();
 
 /*
  * Public API Surface of eatstreet-components

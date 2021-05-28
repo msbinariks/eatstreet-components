@@ -69,12 +69,25 @@
     })();
 
     var EatstreetComponentsModule = /** @class */ (function () {
-        function EatstreetComponentsModule() {
+        function EatstreetComponentsModule(parentModule) {
+            if (parentModule) {
+                throw new Error('EatstreetComponentsModule is already loaded. Import it in the AppModule only');
+            }
         }
+        EatstreetComponentsModule.forRoot = function ($injector) {
+            return {
+                ngModule: EatstreetComponentsModule,
+                providers: [
+                    {
+                        provide: '$injector', useValue: $injector
+                    }
+                ]
+            };
+        };
         return EatstreetComponentsModule;
     }());
     EatstreetComponentsModule.ɵmod = i0__namespace.ɵɵdefineNgModule({ type: EatstreetComponentsModule });
-    EatstreetComponentsModule.ɵinj = i0__namespace.ɵɵdefineInjector({ factory: function EatstreetComponentsModule_Factory(t) { return new (t || EatstreetComponentsModule)(); }, imports: [[]] });
+    EatstreetComponentsModule.ɵinj = i0__namespace.ɵɵdefineInjector({ factory: function EatstreetComponentsModule_Factory(t) { return new (t || EatstreetComponentsModule)(i0__namespace.ɵɵinject(EatstreetComponentsModule, 12)); }, imports: [[]] });
     (function () { (typeof ngJitMode === "undefined" || ngJitMode) && i0__namespace.ɵɵsetNgModuleScope(EatstreetComponentsModule, { declarations: [EatstreetComponentsComponent], exports: [EatstreetComponentsComponent] }); })();
     (function () {
         (typeof ngDevMode === "undefined" || ngDevMode) && i0__namespace.ɵsetClassMetadata(EatstreetComponentsModule, [{
@@ -82,9 +95,16 @@
                 args: [{
                         declarations: [EatstreetComponentsComponent],
                         imports: [],
-                        exports: [EatstreetComponentsComponent]
+                        exports: [EatstreetComponentsComponent],
+                        entryComponents: [EatstreetComponentsComponent]
                     }]
-            }], null, null);
+            }], function () {
+            return [{ type: EatstreetComponentsModule, decorators: [{
+                            type: i0.Optional
+                        }, {
+                            type: i0.SkipSelf
+                        }] }];
+        }, null);
     })();
 
     /*

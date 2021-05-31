@@ -58,17 +58,11 @@ class EatstreetComponentsModule {
         }
     }
     /**
-     * @param {?} $injector
      * @return {?}
      */
-    static forRoot($injector) {
+    static forRoot() {
         return {
             ngModule: EatstreetComponentsModule,
-            providers: [
-                {
-                    provide: '$injector', useValue: $injector
-                }
-            ]
         };
     }
 }

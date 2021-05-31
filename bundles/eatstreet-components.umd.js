@@ -62,21 +62,14 @@
             }
         }
         /**
-         * @param {?} $injector
          * @return {?}
          */
         EatstreetComponentsModule.forRoot = /**
-         * @param {?} $injector
          * @return {?}
          */
-        function ($injector) {
+        function () {
             return {
                 ngModule: EatstreetComponentsModule,
-                providers: [
-                    {
-                        provide: '$injector', useValue: $injector
-                    }
-                ]
             };
         };
         EatstreetComponentsModule.decorators = [

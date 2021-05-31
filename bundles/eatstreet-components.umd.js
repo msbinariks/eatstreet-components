@@ -1,80 +1,75 @@
 (function (global, factory) {
     typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports, require('@angular/core')) :
     typeof define === 'function' && define.amd ? define('eatstreet-components', ['exports', '@angular/core'], factory) :
-    (global = typeof globalThis !== 'undefined' ? globalThis : global || self, factory(global['eatstreet-components'] = {}, global.ng.core));
-}(this, (function (exports, i0) { 'use strict';
+    (global = global || self, factory(global['eatstreet-components'] = {}, global.ng.core));
+}(this, (function (exports, core) { 'use strict';
 
-    function _interopNamespace(e) {
-        if (e && e.__esModule) return e;
-        var n = Object.create(null);
-        if (e) {
-            Object.keys(e).forEach(function (k) {
-                if (k !== 'default') {
-                    var d = Object.getOwnPropertyDescriptor(e, k);
-                    Object.defineProperty(n, k, d.get ? d : {
-                        enumerable: true,
-                        get: function () {
-                            return e[k];
-                        }
-                    });
-                }
-            });
-        }
-        n['default'] = e;
-        return Object.freeze(n);
-    }
-
-    var i0__namespace = /*#__PURE__*/_interopNamespace(i0);
-
+    /**
+     * @fileoverview added by tsickle
+     * Generated from: lib/eatstreet-components.service.ts
+     * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+     */
     var EatstreetComponentsService = /** @class */ (function () {
         function EatstreetComponentsService() {
         }
+        EatstreetComponentsService.decorators = [
+            { type: core.Injectable, args: [{
+                        providedIn: 'root'
+                    },] }
+        ];
+        /** @nocollapse */
+        EatstreetComponentsService.ctorParameters = function () { return []; };
+        /** @nocollapse */ EatstreetComponentsService.ngInjectableDef = core.ɵɵdefineInjectable({ factory: function EatstreetComponentsService_Factory() { return new EatstreetComponentsService(); }, token: EatstreetComponentsService, providedIn: "root" });
         return EatstreetComponentsService;
     }());
-    EatstreetComponentsService.ɵfac = function EatstreetComponentsService_Factory(t) { return new (t || EatstreetComponentsService)(); };
-    EatstreetComponentsService.ɵprov = i0__namespace.ɵɵdefineInjectable({ token: EatstreetComponentsService, factory: EatstreetComponentsService.ɵfac, providedIn: 'root' });
-    (function () {
-        (typeof ngDevMode === "undefined" || ngDevMode) && i0__namespace.ɵsetClassMetadata(EatstreetComponentsService, [{
-                type: i0.Injectable,
-                args: [{
-                        providedIn: 'root'
-                    }]
-            }], function () { return []; }, null);
-    })();
 
+    /**
+     * @fileoverview added by tsickle
+     * Generated from: lib/eatstreet-components.component.ts
+     * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+     */
     var EatstreetComponentsComponent = /** @class */ (function () {
         function EatstreetComponentsComponent() {
         }
-        EatstreetComponentsComponent.prototype.ngOnInit = function () {
+        /**
+         * @return {?}
+         */
+        EatstreetComponentsComponent.prototype.ngOnInit = /**
+         * @return {?}
+         */
+        function () {
         };
+        EatstreetComponentsComponent.decorators = [
+            { type: core.Component, args: [{
+                        selector: 'lib-eatstreet-components',
+                        template: "\n    <p>\n      eatstreet-components works!\n    </p>\n  "
+                    }] }
+        ];
+        /** @nocollapse */
+        EatstreetComponentsComponent.ctorParameters = function () { return []; };
         return EatstreetComponentsComponent;
     }());
-    EatstreetComponentsComponent.ɵfac = function EatstreetComponentsComponent_Factory(t) { return new (t || EatstreetComponentsComponent)(); };
-    EatstreetComponentsComponent.ɵcmp = i0__namespace.ɵɵdefineComponent({ type: EatstreetComponentsComponent, selectors: [["lib-eatstreet-components"]], decls: 2, vars: 0, template: function EatstreetComponentsComponent_Template(rf, ctx) {
-            if (rf & 1) {
-                i0__namespace.ɵɵelementStart(0, "p");
-                i0__namespace.ɵɵtext(1, " eatstreet-components works! ");
-                i0__namespace.ɵɵelementEnd();
-            }
-        }, encapsulation: 2 });
-    (function () {
-        (typeof ngDevMode === "undefined" || ngDevMode) && i0__namespace.ɵsetClassMetadata(EatstreetComponentsComponent, [{
-                type: i0.Component,
-                args: [{
-                        selector: 'lib-eatstreet-components',
-                        template: "\n    <p>\n      eatstreet-components works!\n    </p>\n  ",
-                        styles: []
-                    }]
-            }], function () { return []; }, null);
-    })();
 
+    /**
+     * @fileoverview added by tsickle
+     * Generated from: lib/eatstreet-components.module.ts
+     * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+     */
     var EatstreetComponentsModule = /** @class */ (function () {
         function EatstreetComponentsModule(parentModule) {
             if (parentModule) {
                 throw new Error('EatstreetComponentsModule is already loaded. Import it in the AppModule only');
             }
         }
-        EatstreetComponentsModule.forRoot = function ($injector) {
+        /**
+         * @param {?} $injector
+         * @return {?}
+         */
+        EatstreetComponentsModule.forRoot = /**
+         * @param {?} $injector
+         * @return {?}
+         */
+        function ($injector) {
             return {
                 ngModule: EatstreetComponentsModule,
                 providers: [
@@ -84,36 +79,20 @@
                 ]
             };
         };
-        return EatstreetComponentsModule;
-    }());
-    EatstreetComponentsModule.ɵmod = i0__namespace.ɵɵdefineNgModule({ type: EatstreetComponentsModule });
-    EatstreetComponentsModule.ɵinj = i0__namespace.ɵɵdefineInjector({ factory: function EatstreetComponentsModule_Factory(t) { return new (t || EatstreetComponentsModule)(i0__namespace.ɵɵinject(EatstreetComponentsModule, 12)); }, imports: [[]] });
-    (function () { (typeof ngJitMode === "undefined" || ngJitMode) && i0__namespace.ɵɵsetNgModuleScope(EatstreetComponentsModule, { declarations: [EatstreetComponentsComponent], exports: [EatstreetComponentsComponent] }); })();
-    (function () {
-        (typeof ngDevMode === "undefined" || ngDevMode) && i0__namespace.ɵsetClassMetadata(EatstreetComponentsModule, [{
-                type: i0.NgModule,
-                args: [{
+        EatstreetComponentsModule.decorators = [
+            { type: core.NgModule, args: [{
                         declarations: [EatstreetComponentsComponent],
                         imports: [],
                         exports: [EatstreetComponentsComponent],
                         entryComponents: [EatstreetComponentsComponent]
-                    }]
-            }], function () {
-            return [{ type: EatstreetComponentsModule, decorators: [{
-                            type: i0.Optional
-                        }, {
-                            type: i0.SkipSelf
-                        }] }];
-        }, null);
-    })();
-
-    /*
-     * Public API Surface of eatstreet-components
-     */
-
-    /**
-     * Generated bundle index. Do not edit.
-     */
+                    },] }
+        ];
+        /** @nocollapse */
+        EatstreetComponentsModule.ctorParameters = function () { return [
+            { type: EatstreetComponentsModule, decorators: [{ type: core.Optional }, { type: core.SkipSelf }] }
+        ]; };
+        return EatstreetComponentsModule;
+    }());
 
     exports.EatstreetComponentsComponent = EatstreetComponentsComponent;
     exports.EatstreetComponentsModule = EatstreetComponentsModule;

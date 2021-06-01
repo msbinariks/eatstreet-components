@@ -1,4 +1,4 @@
-import { Injectable, ɵɵdefineInjectable, Component, NgModule, Optional, SkipSelf } from '@angular/core';
+import { Injectable, ɵɵdefineInjectable, Component, Inject, NgModule, Optional, SkipSelf } from '@angular/core';
 
 /**
  * @fileoverview added by tsickle
@@ -23,11 +23,18 @@ EatstreetComponentsService.ctorParameters = () => [];
  * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 class EatstreetComponentsComponent {
-    constructor() { }
+    /**
+     * @param {?} $user
+     */
+    constructor($user) {
+        this.$user = $user;
+    }
     /**
      * @return {?}
      */
     ngOnInit() {
+        console.log(this.$user);
+        debugger;
     }
 }
 EatstreetComponentsComponent.decorators = [
@@ -41,7 +48,13 @@ EatstreetComponentsComponent.decorators = [
             }] }
 ];
 /** @nocollapse */
-EatstreetComponentsComponent.ctorParameters = () => [];
+EatstreetComponentsComponent.ctorParameters = () => [
+    { type: undefined, decorators: [{ type: Inject, args: ['$user',] }] }
+];
+if (false) {
+    /** @type {?} */
+    EatstreetComponentsComponent.prototype.$user;
+}
 
 /**
  * @fileoverview added by tsickle

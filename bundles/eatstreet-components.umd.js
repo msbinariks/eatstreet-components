@@ -29,7 +29,8 @@
      * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
      */
     var EatstreetComponentsComponent = /** @class */ (function () {
-        function EatstreetComponentsComponent() {
+        function EatstreetComponentsComponent($user) {
+            this.$user = $user;
         }
         /**
          * @return {?}
@@ -38,6 +39,8 @@
          * @return {?}
          */
         function () {
+            console.log(this.$user);
+            debugger;
         };
         EatstreetComponentsComponent.decorators = [
             { type: core.Component, args: [{
@@ -46,9 +49,15 @@
                     }] }
         ];
         /** @nocollapse */
-        EatstreetComponentsComponent.ctorParameters = function () { return []; };
+        EatstreetComponentsComponent.ctorParameters = function () { return [
+            { type: undefined, decorators: [{ type: core.Inject, args: ['$user',] }] }
+        ]; };
         return EatstreetComponentsComponent;
     }());
+    if (false) {
+        /** @type {?} */
+        EatstreetComponentsComponent.prototype.$user;
+    }
 
     /**
      * @fileoverview added by tsickle

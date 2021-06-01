@@ -1,5 +1,6 @@
 import { OnInit } from '@angular/core';
 export declare class EatstreetComponentsComponent implements OnInit {
-    constructor();
+    $user: any;
+    constructor($user: any);
     ngOnInit(): void;
 }
